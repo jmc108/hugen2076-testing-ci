@@ -1,11 +1,8 @@
 # HUGEN 2076: Unit testing and continuous integration in-class exercise
 
 This repository supplies a working `clean_numeric()` function, one deliberately
-weak starter test, and a complete GitHub Actions workflow. You choose additional
+weak starter test, and a complete GitHub Actions workflow. You will write additional
 tests. GitHub then runs your saved tests automatically after you push changes.
-
-All examples use invented numeric values. Do not add research data, student IDs,
-passwords, access tokens, or cluster credentials to this public practice project.
 
 ## What is already supplied?
 
@@ -18,26 +15,19 @@ activity_notes.md                 Record your reasoning and observed runs
 testing_ci.Rproj                  Open this project in RStudio
 ```
 
-The function, the test suite, and the automation have different jobs. There is no
-hidden completed test suite in this repository. Do not change the runner or YAML
-to make a failed test appear successful.
+Do not change the runner or YAML.
 
 ## 1. Make your own repository, then clone it
 
 On the instructor's public template page, select **Use this template > Create a
 new repository**. Choose your own account as the owner and name the repository
-`testing-ci-YOURUSERNAME`. Use the visibility your instructor specifies. Selecting
-only the default branch is sufficient.
+`testing-ci-YOURUSERNAME`.
 
 Clone **your newly created repository**, not the instructor's original. Use your
 usual RStudio/Git procedure and the clone URL from your own repository's Code
 button. Open `testing_ci.Rproj`.
 
-Check your terminal's `git remote -v` output: the repository owner should be YOU.
-You will commit and push to that repository throughout this activity. You do not
-need to send a pull request to the instructor's template.
-
-Before class, install the only required R package if necessary:
+Install the `testthat` package if necessary:
 
 ```r
 install.packages("testthat")
@@ -58,13 +48,7 @@ Rscript --vanilla run_tests.R
 ```
 
 The supplied test should pass. Replace `YOURUSERNAME` in `activity_notes.md`, save,
-commit, and push. You may use RStudio's Git panel or the terminal:
-
-```bash
-git add activity_notes.md
-git commit -m "Start my testing and CI activity"
-git push
-```
+commit, and push.
 
 Open **your repository > Actions > R tests**, select the run for that commit,
 then open the **Run unit tests** job and expand **Run tests**. Record the result.
