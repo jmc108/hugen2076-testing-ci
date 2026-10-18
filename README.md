@@ -1,6 +1,4 @@
-# HUGEN 2076: Choose the tests, then run them on every push
-
-**One project for test design and continuous integration (CI).**
+# HUGEN 2076: Unit testing and continuous integration in-class exercise
 
 This repository supplies a working `clean_numeric()` function, one deliberately
 weak starter test, and a complete GitHub Actions workflow. You choose additional
