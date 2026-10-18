@@ -95,49 +95,32 @@ results; they are not supplied for you.
 
 For each test, use a tiny input whose result you can determine independently.
 Write a brief comment naming a plausible mistake that the test could reveal.
-Do not run the function and blindly copy its output as the expected answer.
 
 Save and rerun `source("run_tests.R")`. If a test fails at this stage, compare the
 specification, the expected result, the saved code, and the failure report before
-changing anything. Ask your instructor if the disagreement is unclear.
+changing anything.
 
-When your tests pass against the supplied working function, commit and push:
-
-```bash
-git add tests/test-clean-numeric.R activity_notes.md
-git commit -m "Add tests for specified cleaning behaviors"
-git push
-```
+When your tests pass against the supplied working function, commit and push.
 
 Find the run for this commit. Inspect the **Run tests** step and record what ran.
 The same checks should pass on GitHub. A failure during setup is not evidence that
 your test found a problem in the function.
 
-**Pause here until your instructor supplies the next code change.**
+## 5. Simulate development and try out your automatic tests
 
-## 5. Challenge your suite
-
-Your instructor will supply a small deliberate change to `R/clean_numeric.R`.
+The instructor will supply a small deliberate change to `R/clean_numeric.R`.
 Make only that change. Keep your test file unchanged initially.
 
-Run the tests locally, then commit and push the changed implementation EVEN IF
-it fails. Pushing deliberately broken code is a controlled demonstration in
-this disposable practice repository, not the usual development procedure.
-
-```bash
-git add R/clean_numeric.R
-git commit -m "Class experiment: apply the instructor code change"
-git push
-```
+Commit and push the changed implementation. (Pushing **deliberately** broken code is a controlled demonstration in
+this disposable practice repository, not the usual development procedure!)
 
 Does the resulting Actions run pass or fail? Record the result either way.
-Compare with a neighbor: the same code change can produce different test results
-when the suites check different behaviors.
+Compare your results with a classmate, because the same code change can produce different test results
+when the unit tests check different behaviors.
 
 If your suite missed the mistake, leave the modified implementation in place and
 add a test that exposes the discrepancy with the specification. Confirm it fails
 locally, then commit and push the new test so the failure is visible on GitHub.
-Do not insert an unrelated failing assertion just to get a red check.
 
 If your original suite caught the mistake, identify the test and explain why its
 input distinguishes the required behavior from the changed behavior.
@@ -145,20 +128,12 @@ input distinguishes the required behavior from the changed behavior.
 ## 6. Repair the implementation and preserve the evidence
 
 Correct the implementation WITHOUT deleting or weakening the revealing test.
-Save, run your full suite locally, and push the repair:
-
-```bash
-git add R/clean_numeric.R
-git commit -m "Repair the implementation while retaining the tests"
-git push
-```
+Save, run your full suite locally, and push the repair.
 
 Open the new run and confirm that the tests pass. A failed run remains a record
 of the old commit; repairing the code does not turn that old run green.
 
-Finish `activity_notes.md` and commit/push it. Use your instructor's submission
-instructions; the natural evidence for this activity is your repository URL and
-the saved run URLs, not screenshots of an unexplained green icon.
+Finish `activity_notes.md` and commit/push it.
 
 ## What the YAML does
 
